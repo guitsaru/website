@@ -5,9 +5,12 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [
-    "../lib/website_web/templates/**/*.html.eex"
-  ],
+  purge: {
+    enabled: true,
+    content: [
+      "../lib/website_web/templates/**/*.html.eex"
+    ]
+  },
   theme: {
     extend: {
       fontFamily: {
