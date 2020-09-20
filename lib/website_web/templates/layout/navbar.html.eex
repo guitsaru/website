@@ -3,6 +3,7 @@
     <div class="flex gap-4">
       <%= link "Matt Pruitt", to: Routes.root_path(@conn, :index), class: "text-xl font-semibold text-gray-200 hover:text-gray-50" %>
       <%= link "Articles", to: Routes.article_path(@conn, :index), class: "text-xl font-semibold text-gray-200 hover:text-gray-50" %>
+      <%= link "Resume", to: "http://resume.mattpruitt.com", target: "_blank", class: "text-xl font-semibold text-gray-200 hover:text-gray-50" %>
       <%= link "Work with me", to: "#contact", class: "text-xl font-semibold text-gray-200 hover:text-gray-50" %>
     </div>
 
