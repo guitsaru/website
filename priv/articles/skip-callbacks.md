@@ -3,7 +3,7 @@
   published_at: ~D[2017-01-14],
   title: "How to Skip ActiveModel Callbacks",
   categories: ["ruby"],
-  image: "/images/skip-callbacks.jpg"
+  image: "/images/skip-callbacks.webp"
 }
 ---
 

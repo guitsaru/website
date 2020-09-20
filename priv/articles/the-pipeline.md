@@ -3,7 +3,7 @@
   title: "Elixir Design Patterns - The Pipeline",
   published_at: ~D[2017-03-20],
   categories: ["elixir"],
-  image: "/images/the-pipeline.jpg"
+  image: "/images/the-pipeline.webp"
 }
 
 ---

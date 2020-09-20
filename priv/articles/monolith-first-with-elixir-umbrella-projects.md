@@ -3,7 +3,7 @@
   title: "Monolith First in Elixir with Umbrella Projects",
   published_at: ~D[2017-03-22],
   categories: ["elixir"],
-  image: "/images/monolith-first-with-elixir-umbrella-projects.jpg"
+  image: "/images/monolith-first-with-elixir-umbrella-projects.webp"
 }
 ---
 
