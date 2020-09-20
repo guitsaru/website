@@ -39,7 +39,11 @@ defmodule Website.MixProject do
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:earmark, "~> 1.4.10"},
+      {:exgravatar, "~> 2.0.2"},
+      {:atomex, "~> 0.3.0"},
+      {:dialyxir, "~> 0.5.0", only: [:dev], runtime: false}
     ]
   end
 

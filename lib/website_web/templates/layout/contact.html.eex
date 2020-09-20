@@ -1,0 +1,37 @@
+<div id="contact" class="flex-shrink-0 relative bg-gray-800">
+  <div class="h-56 bg-blue-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=76A9FA&sat=-100&blend-mode=multiply" alt="Support team">
+  </div>
+
+  <div class="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <div class="md:ml-auto md:w-1/2 md:pl-10">
+      <div class="text-base leading-6 font-semibold uppercase tracking-wider text-gray-300">
+        Let's build something awesome
+      </div>
+
+      <h2 class="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
+        Get in touch
+      </h2>
+
+      <div class="mt-12 flex gap-4 items-center">
+        <span class="inline-flex rounded-md shadow-sm">
+          <a href="mailto:matt@mattpruitt.com" class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">
+            <%= render WebsiteWeb.IconView, "email.html", class: "-ml-1 mr-3 h-5 w-5" %>
+
+            Send an email
+          </a>
+        </span>
+
+        <span class="text-white">or</span>
+
+        <span class="inline-flex rounded-md shadow-sm">
+          <a href="https://calendly.com/bigrefactor/chat" class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">
+            <%= render WebsiteWeb.IconView, "calendar.html", class: "-ml-1 mr-3 h-5 w-5" %>
+
+            Schedule a chat
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

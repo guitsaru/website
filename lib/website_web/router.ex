@@ -16,7 +16,13 @@ defmodule WebsiteWeb.Router do
   scope "/", WebsiteWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", PageController, :index, as: :root
+    get "/contact", PageController, :contact
+
+    get "/feed", FeedController, :index
+    get "/articles", ArticleController, :index
+    get "/articles/tags/:tag", ArticleController, :tag
+    get "/articles/:slug", ArticleController, :show
   end
 
   # Other scopes may use custom stacks.

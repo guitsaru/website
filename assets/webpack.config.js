@@ -38,8 +38,8 @@ module.exports = (env, options) => {
           test: /\.[s]?css$/,
           use: [
             MiniCssExtractPlugin.loader,
-            'css-loader',
-            'sass-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader'
           ],
         }
       ]
@@ -48,6 +48,6 @@ module.exports = (env, options) => {
       new MiniCssExtractPlugin({ filename: '../css/app.css' }),
       new CopyWebpackPlugin([{ from: 'static/', to: '../' }])
     ]
-    .concat(devMode ? [new HardSourceWebpackPlugin()] : [])
+      .concat(devMode ? [new HardSourceWebpackPlugin()] : [])
   }
 };

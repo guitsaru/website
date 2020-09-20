@@ -1,6 +1,8 @@
 defmodule WebsiteWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :website
 
+  alias WebsiteWeb.Redirect
+
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
@@ -13,6 +15,8 @@ defmodule WebsiteWeb.Endpoint do
   socket "/socket", WebsiteWeb.UserSocket,
     websocket: true,
     longpoll: false
+
+  plug Redirect, %{from: "/post", to: "/articles"}
 
   # Serve at "/" the static files from "priv/static" directory.
   #

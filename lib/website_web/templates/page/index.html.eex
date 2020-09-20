@@ -1,38 +1,27 @@
-<section class="phx-hero">
-  <h1>Welcome to Phoenix!</h1>
-  <p>Peace of mind from prototype to production</p>
+<section class="bg-gray-700 pb-32 pt-20">
+  <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center">
+    <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-100 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
+      Hi, I'm Matt Pruitt
+    </h2>
+
+    <p class="mt-3 max-w-md mx-auto text-lg text-gray-300 sm:text-xl md:mt-5 md:max-w-3xl">
+      I make web applications with <span class="text-indigo-500 font-semibold">Elixir</span> & <span class="text-red-500 font-semibold">Ruby</span>
+    </p>
+  </div>
 </section>
 
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.5/CHANGELOG.md">v1.5 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-      <li>
-        <a href="https://elixir-slackin.herokuapp.com/">Elixir on Slack</a>
-      </li>
-    </ul>
-  </article>
+<section class="relative pb-20 px-4 sm:px-6 pt-12 lg:pb-28 lg:px-8 text-left">
+  <div class="relative max-w-7xl mx-auto">
+    <div class="pb-5 border-b border-gray-200">
+      <h3 class="text-2xl leading-6 font-semibold text-gray-900">
+        Latest Articles
+      </h3>
+    </div>
+
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+      <%= for article <- @articles do %>
+        <%= render WebsiteWeb.ArticleView, "article_preview.html", conn: @conn, article: article %>
+      <% end %>
+    </div>
+  </div>
 </section>

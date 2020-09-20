@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+
+/* Insert components here */
+
+@tailwind utilities;
+
+/* Insert utilities here */
+
+.h-128 {
+  height: 36rem;
+}
