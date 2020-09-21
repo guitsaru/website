@@ -17,6 +17,7 @@ defmodule WebsiteWeb.Endpoint do
     longpoll: false
 
   plug Redirect, %{from: "/post", to: "/articles"}
+  plug Redirect, %{from: "/tags", to: "/articles/tags"}
 
   # Serve at "/" the static files from "priv/static" directory.
   #
