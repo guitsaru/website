@@ -1,5 +1,4 @@
 defmodule WebsiteWeb.Endpoint do
-  use WebsiteWeb.Ping
   use Phoenix.Endpoint, otp_app: :website
 
   alias WebsiteWeb.Redirect
@@ -17,6 +16,7 @@ defmodule WebsiteWeb.Endpoint do
     websocket: true,
     longpoll: false
 
+  plug WebsiteWeb.Ping
   plug Redirect, %{from: "/post", to: "/articles"}
   plug Redirect, %{from: "/tags", to: "/articles/tags"}
 
