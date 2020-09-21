@@ -7,16 +7,18 @@ defmodule WebsiteWeb.ArticleController do
   def index(conn, _) do
     articles = ArticleRepository.published()
 
-    render(conn, "index.html", articles: articles)
+    render(conn, "index.html", articles: articles, page_title: "Articles")
   end
 
   @spec tag(Plug.Conn.t(), map()) :: Plug.Conn.t()
   def tag(conn, %{"tag" => tag}) do
+    page_title = String.capitalize(tag) <> " Articles"
+
     articles =
       ArticleRepository.published()
       |> Enum.filter(fn article -> String.downcase(tag) in article.categories end)
 
-    render(conn, "index.html", articles: articles)
+    render(conn, "index.html", articles: articles, page_title: page_title)
   end
 
   @spec show(Plug.Conn.t(), map()) :: Plug.Conn.t()
@@ -26,6 +28,6 @@ defmodule WebsiteWeb.ArticleController do
         String.downcase(article.slug) == String.downcase(slug)
       end)
 
-    render(conn, "show.html", article: article)
+    render(conn, "show.html", article: article, page_title: article.title)
   end
 end

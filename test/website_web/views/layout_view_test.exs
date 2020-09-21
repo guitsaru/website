@@ -1,8 +1,20 @@
 defmodule WebsiteWeb.LayoutViewTest do
   use WebsiteWeb.ConnCase, async: true
 
-  # When testing helpers, you may want to import Phoenix.HTML and
-  # use functions such as safe_to_string() to convert the helper
-  # result into an HTML string.
-  # import Phoenix.HTML
+  alias WebsiteWeb.LayoutView
+
+  describe "page_title/1" do
+    test "has a default title", %{conn: conn} do
+      assert LayoutView.title(conn) == "Matt Pruitt"
+    end
+
+    test "includes the assigned page title", %{conn: conn} do
+      title =
+        conn
+        |> Plug.Conn.assign(:page_title, "Test")
+        |> LayoutView.title()
+
+      assert title == "Test | Matt Pruitt"
+    end
+  end
 end

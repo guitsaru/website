@@ -24,7 +24,9 @@ defmodule Website.ArticleTest do
     end
 
     test "has body", %{article: article} do
-      assert article.body =~ "<p>"
+      {:safe, html} = article.body
+
+      assert html =~ "<p>"
     end
   end
 end
