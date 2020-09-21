@@ -43,6 +43,7 @@ defmodule Website.MixProject do
       {:earmark, "~> 1.4.10"},
       {:exgravatar, "~> 2.0.2"},
       {:atomex, "~> 0.3.0"},
+      {:pinglix, "~> 1.1.4"},
       {:dialyxir, "~> 0.5.0", only: [:dev], runtime: false}
     ]
   end
