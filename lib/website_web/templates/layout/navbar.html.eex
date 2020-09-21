@@ -1,23 +1,23 @@
 <div class="bg-gray-700 w-full">
   <nav class="flex justify-between bg-gray-700 px-6 py-6 max-w-6xl mx-auto gap-4">
-    <div class="flex flex-col md:flex-row gap-6">
-      <div>
+    <div class="flex flex-col md:flex-row">
+      <div class="mb-4 sm:mb-0 sm:mr-6">
         <%= link "Matt Pruitt", to: Routes.root_path(@conn, :index), class: "text-xl font-semibold text-gray-200 hover:text-gray-50" %>
       </div>
 
-      <div class="flex flex-col md:flex-row sm:gap-4">
-        <%= link "Articles", to: Routes.article_path(@conn, :index), class: "text-xl font-semibold text-gray-200 hover:text-gray-50" %>
-        <%= link "Resume", to: "https://resume.mattpruitt.com", target: "_blank", class: "text-xl font-semibold text-gray-200 hover:text-gray-50" %>
+      <div class="flex flex-col md:flex-row">
+        <%= link "Articles", to: Routes.article_path(@conn, :index), class: "mr-4 text-xl font-semibold text-gray-200 hover:text-gray-50" %>
+        <%= link "Resume", to: "https://resume.mattpruitt.com", target: "_blank", class: "mr-4 text-xl font-semibold text-gray-200 hover:text-gray-50" %>
         <%= link "Work with me", to: "#contact", class: "text-xl font-semibold text-gray-200 hover:text-gray-50" %>
       </div>
     </div>
 
-    <div class="flex gap-4 sm:items-center">
-      <%= link to: Routes.feed_path(@conn, :index), target: "_blank", class: "w-4 h-4 text-gray-200 hover:text-gray-50" do %>
+    <div class="flex sm:items-center">
+      <%= link to: Routes.feed_path(@conn, :index), target: "_blank", class: "mr-4 w-4 h-4 text-gray-200 hover:text-gray-50" do %>
         <%= render WebsiteWeb.IconView, "rss.html" %>
       <% end %>
 
-      <%= link to: "https://github.com/guitsaru", target: "_blank", class: "w-4 h-4 text-gray-200 hover:text-gray-50" do %>
+      <%= link to: "https://github.com/guitsaru", target: "_blank", class: "mr-4 w-4 h-4 text-gray-200 hover:text-gray-50" do %>
         <%= render WebsiteWeb.IconView, "github.html" %>
       <% end %>
 
