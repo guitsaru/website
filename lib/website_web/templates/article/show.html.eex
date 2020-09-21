@@ -34,7 +34,8 @@
   <div class="relative px-4 sm:px-6 lg:px-8">
     <div class="text-lg mb-4 max-w-prose mx-auto">
       <%= for category <- @article.categories do %>
-        <%= link to: Routes.article_path(@conn, :tag, category) do %>
+        <%# link to: Routes.article_path(@conn, :tag, category) do %>
+        <%= link to: "https://toptal.com/#{category}", class: "cursor-default" do %>
           <%= render WebsiteWeb.ComponentView, "badge.html", text: category, color: category_color(category) %>
         <% end %>
       <% end %>
