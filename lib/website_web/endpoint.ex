@@ -1,4 +1,5 @@
 defmodule WebsiteWeb.Endpoint do
+  use WebsiteWeb.Ping
   use Phoenix.Endpoint, otp_app: :website
 
   alias WebsiteWeb.Redirect
