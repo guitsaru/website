@@ -3,7 +3,7 @@
   published_at: ~D[2020-09-21],
   title: "Use Ecto Embedded Schemas to Back Phoenix Forms",
   categories: ["elixir"],
-  image: "/images/skip-callbacks.webp"
+  image: "/images/phoenix-forms-with-ecto-embedded-schema.webp"
 }
 ---
 Phoenix has been pushing separation of concerns through it's defaults by generating
