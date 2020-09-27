@@ -17,7 +17,6 @@ defmodule WebsiteWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index, as: :root
-    get "/contact", PageController, :contact
 
     get "/feed", FeedController, :index
     get "/articles", ArticleController, :index

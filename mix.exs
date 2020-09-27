@@ -10,7 +10,15 @@ defmodule Website.MixProject do
       compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test,
+        "coveralls.github": :test
+      ]
     ]
   end
 
@@ -33,18 +41,20 @@ defmodule Website.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:atomex, "~> 0.3.0"},
+      {:credo, "~> 1.4.0", only: [:dev, :test]},
+      {:dialyxir, "~> 1.0.0", only: [:dev, :test], runtime: false},
+      {:earmark, "~> 1.4.10"},
+      {:excoveralls, "0.13.2"},
+      {:exgravatar, "~> 2.0.2"},
+      {:jason, "~> 1.0"},
       {:phoenix, "~> 1.5.4"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:telemetry_metrics, "~> 0.4"},
-      {:telemetry_poller, "~> 0.4"},
-      {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
-      {:earmark, "~> 1.4.10"},
-      {:exgravatar, "~> 2.0.2"},
-      {:atomex, "~> 0.3.0"},
       {:pinglix, "~> 1.1.4"},
-      {:dialyxir, "~> 0.5.0", only: [:dev], runtime: false}
+      {:plug_cowboy, "~> 2.0"},
+      {:telemetry_metrics, "~> 0.4"},
+      {:telemetry_poller, "~> 0.4"}
     ]
   end
 
