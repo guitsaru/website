@@ -1,4 +1,6 @@
 defmodule Website.ArticleLoader do
+  @moduledoc "Finds all article markdown files and parses them into a list of article structs."
+
   @article_dir to_string(:code.priv_dir(:website)) <> "/articles"
 
   @spec __using__(any) :: any
@@ -25,7 +27,6 @@ defmodule Website.ArticleLoader do
         |> :erlang.md5() != unquote(:erlang.md5(files))
       end
 
-      # TODO: Remove me once we require Elixir v1.11+.
       def __phoenix_recompile__?, do: __mix_recompile__?()
 
       @articles unquote(articles)

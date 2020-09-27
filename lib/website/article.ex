@@ -1,4 +1,6 @@
 defmodule Website.Article do
+  @moduledoc "This struct contains all the data for an article."
+
   defmodule ParseException, do: defexception([:message])
 
   defstruct slug: "",
