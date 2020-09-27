@@ -1,4 +1,6 @@
 defmodule WebsiteWeb.PageControllerTest do
+  @moduledoc false
+
   use WebsiteWeb.ConnCase
 
   test "GET /", %{conn: conn} do

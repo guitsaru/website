@@ -18,7 +18,7 @@ defmodule WebsiteWeb.ArticleController do
       ArticleRepository.published()
       |> Enum.filter(fn article -> String.downcase(tag) in article.categories end)
 
-    render(conn, "index.html", articles: articles, page_title: page_title)
+    render(conn, "index.html", articles: articles, page_title: page_title, tag: tag)
   end
 
   @spec show(Plug.Conn.t(), map()) :: Plug.Conn.t()

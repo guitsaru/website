@@ -1,4 +1,6 @@
 defmodule Website.ArticleTest do
+  @moduledoc false
+
   use ExUnit.Case, async: true
 
   alias Website.Article
@@ -27,6 +29,10 @@ defmodule Website.ArticleTest do
       {:safe, html} = article.body
 
       assert html =~ "<p>"
+    end
+
+    test "with a nonexistent file" do
+      assert_raise Article.ParseException, fn -> Article.parse("/asfdadgadsfasdfasdf.md") end
     end
   end
 end

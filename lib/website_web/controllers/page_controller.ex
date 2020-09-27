@@ -9,9 +9,4 @@ defmodule WebsiteWeb.PageController do
 
     render(conn, "index.html", articles: articles)
   end
-
-  @spec contact(PLug.Conn.t(), map) :: Plug.Conn.t()
-  def contact(conn, _) do
-    render(conn, "contact.html")
-  end
 end

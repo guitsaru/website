@@ -1,0 +1,12 @@
+{
+  "skip_files": [
+    "test/",
+    "lib/website/application.ex",
+    "lib/website/article_loader.ex",
+    "lib/website_web/gettext.ex",
+    "lib/website_web/website_web.ex",
+    "lib/website_web.ex",
+    "lib/website_web/router.ex",
+    "lib/website_web/views/error_helpers.ex"
+  ]
+}
