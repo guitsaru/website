@@ -9,7 +9,7 @@
 Phoenix has been pushing separation of concerns through it's defaults by generating
 `project` and `project_web` directories and defaulting generators to use contexts.
 Since we should be separating our web application logic from our core application logic,
-I have started using embedded ecto schemas to create form modules in my proejcts.
+I have started using embedded ecto schemas to create form modules in my projects.
 
 This enables us to to separate our frontend data model representations from our
 schema data model. One of the most common suggestions for implementing a proper 
