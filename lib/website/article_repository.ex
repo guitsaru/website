@@ -1,7 +1,7 @@
 defmodule Website.ArticleRepository do
   @moduledoc "This module fetches all articles"
 
-  use Website.ArticleLoader
+  use Website.ContentLoader, "/articles"
 
   alias Website.Article
 
