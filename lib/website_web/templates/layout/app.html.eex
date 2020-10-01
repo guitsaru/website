@@ -8,6 +8,7 @@
 
     <title><%= title(@conn) %></title>
 
+    <link rel="canonical" href="<%= WebsiteWeb.Router.Helpers.url(@conn) <> @conn.request_path %>">
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -16,15 +17,13 @@
     <script async defer data-domain="mattpruitt.com" src="https://plausible.mattpruitt.com/js/index.js"></script>
   </head>
 
-  <body class="bg-gray-50 h-full">
+  <body class="h-full bg-gray-50">
     <div class="flex flex-col h-full">
       <%= render "navbar.html", conn: @conn %>
 
       <div class="flex-1">
         <%= @inner_content %>
       </div>
-
-      <%= render "contact.html" %>
     </div>
   </body>
 </html>

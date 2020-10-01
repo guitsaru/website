@@ -5,7 +5,7 @@ defmodule WebsiteWeb.PageController do
 
   @spec index(Plug.Conn.t(), any) :: Plug.Conn.t()
   def index(conn, _params) do
-    articles = ArticleRepository.published() |> Enum.take(6)
+    articles = ArticleRepository.published() |> Enum.take(9)
 
     render(conn, "index.html", articles: articles)
   end
