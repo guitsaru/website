@@ -48,7 +48,7 @@
       </div>
     <% end %>
 
-    <div class="prose prose-lg mx-auto">
+    <div class="prose prose-blue prose-lg mx-auto">
       <%= @article.body %>
     </div>
   </div>
