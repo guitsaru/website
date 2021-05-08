@@ -41,11 +41,11 @@ defmodule Website.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:atomex, "~> 0.3.0"},
-      {:credo, "~> 1.4.0", only: [:dev, :test]},
-      {:dialyxir, "~> 1.0.0", only: [:dev, :test], runtime: false},
+      {:atomex, "~> 0.4.1"},
+      {:credo, "~> 1.5.5", only: [:dev, :test]},
+      {:dialyxir, "~> 1.1.0", only: [:dev, :test], runtime: false},
       {:earmark, "~> 1.4.10"},
-      {:excoveralls, "0.13.2"},
+      {:excoveralls, "0.14.0"},
       {:exgravatar, "~> 2.0.2"},
       {:jason, "~> 1.0"},
       {:makeup, "~> 1.0.5"},
