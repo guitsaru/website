@@ -6,7 +6,7 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: {
-    enabled: false,
+    enabled: true,
     content: [
       "../lib/website_web/templates/**/*.html.eex"
     ],
