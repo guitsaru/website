@@ -1,4 +1,8 @@
 defmodule Website.Fakebook do
+  @moduledoc false
+
+  alias Website.Fakebook.Formatter
+
   def as_html!(markdown, options \\ []) do
     {:ok, ast, []} = EarmarkParser.as_ast(markdown, options)
 
@@ -86,7 +90,7 @@ defmodule Website.Fakebook do
   defp eval(code, binding) do
     {result, binding} = Code.eval_string(Enum.join(code, "\n"), binding)
 
-    {Website.Fakebook.Formatter.format({:ok, result}), binding}
+    {Formatter.format({:ok, result}), binding}
   end
 
   defp icon do
