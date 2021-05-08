@@ -56,7 +56,7 @@ defmodule Website.MixProject do
       {:pinglix, "~> 1.1.4"},
       {:plug_cowboy, "~> 2.0"},
       {:telemetry_metrics, "~> 0.4"},
-      {:telemetry_poller, "~> 0.4"},
+      {:telemetry_poller, "~> 0.4"}
     ]
   end
 
