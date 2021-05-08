@@ -56,7 +56,7 @@ In a typical web project I start with two applications: a `web` application (usi
 ## Releases
 I use [distillery](https://github.com/bitwalker/distillery) to create releases when I’m ready to deploy.  A simple release configuration will look like this:
 
-```Elixir
+```elixir
 release :umbrella do
   set version: "1.0.0"
 
@@ -70,7 +70,7 @@ end
 
 If I decide that the business logic application needs to be deployed on its own to more servers I can define two releases:
 
-```Elixir
+```elixir
 release :umbrella do
   set version: "2.0.0"
 

@@ -40,16 +40,16 @@
       <% end %>
     </div>
 
-    <div class="text-lg max-w-prose mx-auto mb-6">
-      <h1 class="mt-2 mb-8 text-3xl text-left leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"><%= @article.title %></h1>
-    </div>
+    <%= if @article.show_title do %>
+      <div class="text-lg max-w-prose mx-auto mb-6">
+        <h1 class="mt-2 mb-8 text-3xl text-left leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+          <%= @article.title %>
+        </h1>
+      </div>
+    <% end %>
 
-    <div class="prose prose-lg text-gray-500 mx-auto">
+    <div class="prose prose-lg mx-auto">
       <%= @article.body %>
     </div>
   </div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
-<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/elixir.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>

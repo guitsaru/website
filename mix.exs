@@ -48,13 +48,15 @@ defmodule Website.MixProject do
       {:excoveralls, "0.13.2"},
       {:exgravatar, "~> 2.0.2"},
       {:jason, "~> 1.0"},
+      {:makeup, "~> 1.0.5"},
+      {:makeup_elixir, "~> 0.15.1"},
       {:phoenix, "~> 1.5.4"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:pinglix, "~> 1.1.4"},
       {:plug_cowboy, "~> 2.0"},
       {:telemetry_metrics, "~> 0.4"},
-      {:telemetry_poller, "~> 0.4"}
+      {:telemetry_poller, "~> 0.4"},
     ]
   end
 

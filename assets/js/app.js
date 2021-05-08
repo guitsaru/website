@@ -2,6 +2,7 @@
 // The MiniCssExtractPlugin is used to separate it out into
 // its own CSS file.
 import "../css/app.css"
+import "../css/vim.css"
 
 // webpack automatically bundles all modules in your
 // entry points. Those entry points can be configured
@@ -13,3 +14,5 @@ import "../css/app.css"
 //     import socket from "./socket"
 //
 import "phoenix_html"
+
+import "alpinejs"

@@ -18,7 +18,7 @@ defmodule Website.ContentLoader do
   @spec __using__(String.t()) :: any
   defmacro __using__(path) do
     article_dir = Path.join(@priv_dir, path)
-    file_path = Path.join(article_dir, "/*.md")
+    file_path = Path.join(article_dir, "/*.{livemd,md}")
     files = Path.wildcard(file_path)
 
     articles =
@@ -26,7 +26,7 @@ defmodule Website.ContentLoader do
       |> Enum.map(&Website.Article.parse/1)
       |> Macro.escape()
 
-    quote do
+    quote location: :keep do
       for file <- unquote(files) do
         @external_resource file
       end

@@ -5,9 +5,15 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [
-    "../lib/website_web/templates/**/*.html.eex"
-  ],
+  purge: {
+    enabled: false,
+    content: [
+      "../lib/website_web/templates/**/*.html.eex"
+    ],
+    options: {
+      safelist: "prose-red"
+    }
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -18,5 +24,6 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/ui'),
+    require('@tailwindcss/typography'),
   ]
 }
