@@ -52,7 +52,6 @@ defmodule Website.Article do
         show_title:
           Map.get(attributes, :show_title, !String.match?(Path.extname(filename), ~r/livemd/))
       }
-      |> IO.inspect()
     else
       _ -> raise __MODULE__.ParseException, "#{filename} could not be parsed"
     end
