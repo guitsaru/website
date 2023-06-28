@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
     <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
-    <script async defer data-domain="mattpruitt.com" src="https://plausible.mattpruitt.com/js/index.js"></script>
+    <script defer data-domain="mattpruitt.com" src="https://plausible.mattpruitt.com/js/index.js"></script>
   </head>
 
   <body class="h-full bg-gray-50">
