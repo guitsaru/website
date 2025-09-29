@@ -5,7 +5,7 @@ defmodule Website.MixProject do
     [
       app: :website,
       version: "0.1.0",
-      elixir: "~> 1.7",
+      elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -42,7 +42,7 @@ defmodule Website.MixProject do
   defp deps do
     [
       {:atomex, "~> 0.4.1"},
-      {:credo, "~> 1.5.5", only: [:dev, :test]},
+      {:credo, "~> 1.7", only: [:dev, :test]},
       {:dialyxir, "~> 1.1.0", only: [:dev, :test], runtime: false},
       {:earmark, "~> 1.4.10"},
       {:excoveralls, "0.14.0"},
