@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mix deps.update:*)",
+      "Bash(mix compile)",
+      "Bash(mix deps.clean:*)",
+      "Bash(mix deps.get:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

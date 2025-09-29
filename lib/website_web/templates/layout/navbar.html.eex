@@ -7,7 +7,7 @@
 
       <div class="flex flex-col md:flex-row">
         <%= link "Articles", to: Routes.article_path(@conn, :index), class: "mr-4 text-xl font-semibold text-gray-200 hover:text-gray-50" %>
-        <%= link "Resume", to: "https://resume.mattpruitt.com", target: "_blank", class: "mr-4 text-xl font-semibold text-gray-200 hover:text-gray-50" %>
+        <%= link "Resume", to: "http://resume.mattpruitt.com", target: "_blank", class: "mr-4 text-xl font-semibold text-gray-200 hover:text-gray-50" %>
       </div>
     </div>
 
