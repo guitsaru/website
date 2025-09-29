@@ -1,19 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  purge: {
-    enabled: true,
-    content: [
-      "../lib/website_web/templates/**/*.html.eex"
-    ],
-    options: {
-      safelist: "prose-red"
-    }
-  },
+  content: [
+    "../lib/website_web/templates/**/*.html.eex"
+  ],
+  safelist: ["prose-red"],
   theme: {
     extend: {
       fontFamily: {
